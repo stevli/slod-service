@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "title": "Slod.com",
+        "description": "Social Media Platform",
+        "image": "/images/project_slod.jpg",
+        "links": {
+            "demo": "https://slod.com"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Escape from Rush Keep",
+        "description": "Gamemaker Engine - Puzzle Game",
+        "image": "/images/project_rushkeep.jpg",
+        "links": {
+            "github": "https://github.com/stevli/gamemaker",
+            "demo": "https://me.slod.com/rushkeep"
+        }
+    },
+    {
+        "id": 3,
+        "title": "The Banana",
+        "description": "DandyHacks 2019 - Online Multiplayer Tag Game",
+        "image": "/images/project_banana.jpg",
+        "links": {
+            "github": "https://github.com/stevli/thebanana",
+            "demo": "https://server.slod.com/"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Portfolio Website",
+        "description": "Created my own portfolio website",
+        "image": "/images/project_portfolio.jpg",
+        "links": {
+            "demo": "https://slod.com/pages/portfolio"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Mobile Game",
+        "description": "Simple Turn Based Mobile Game",
+        "image": "/images/project_mobilegame.jpg",
+        "links": {
+            "demo": "https://slod.com/pages/mobilegame"
+        }
+    },
+    {
+        "id": 6,
+        "title": "The Orange",
+        "description": "DandyHacks 2018 - Generated News Articles via Markov Chains and Web Scraping",
+        "image": "/images/project_orange.jpg",
+        "links": {
+            "github": "https://github.com/jzaia18/DandyHacks2018"
+        }
+    },
+    {
+        "id": 7,
+        "title": "BeatBot",
+        "description": "Java Game created with Java FX",
+        "image": "/images/project_beatbot.jpg",
+        "links": {
+            "github": "https://github.com/JosticeMan/BeatBot"
+        }
+    }
+]

@@ -1,0 +1,78 @@
+{
+    "languages": [
+        {
+            "name": "JavaScript",
+            "icon": "/images/skills/javascriptf7df1e.svg"
+        },
+        {
+            "name": "C++",
+            "icon": "/images/skills/cplusplus00599c.svg"
+        },
+        {
+            "name": "C#",
+            "icon": "/images/skills/csharplogo_c_sharp.svg"
+        },
+        {
+            "name": "Scala",
+            "icon": "/images/skills/scaladc322f.svg"
+        },
+        {
+            "name": "Python",
+            "icon": "/images/skills/python3776ab.svg"
+        },
+        {
+            "name": "Java",
+            "icon": "/images/skills/javaffffff.svg"
+        },
+        {
+            "name": "NodeJS",
+            "icon": "/images/skills/nodejs339933.svg"
+        },
+        {
+            "name": "React",
+            "icon": "/images/skills/react61dafb.svg"
+        }
+    ],
+    "cloud": [
+        {
+            "name": "AWS",
+            "icon": "/images/skills/awsamazon_web_services_logo.svg"
+        },
+        {
+            "name": "GCP",
+            "icon": "/images/skills/gcp4285f4.svg"
+        },
+        {
+            "name": "Azure",
+            "icon": "/images/skills/azuremicrosoft_azure.svg"
+        }
+    ],
+    "devops": [
+        {
+            "name": "Docker",
+            "icon": "/images/skills/docker2496ed.svg"
+        },
+        {
+            "name": "Kubernetes",
+            "icon": "/images/skills/kubernetes326ce5.svg"
+        },
+        {
+            "name": "Airflow",
+            "icon": "/images/skills/airflow017cee.svg"
+        }
+    ],
+    "bigData": [
+        {
+            "name": "Hive",
+            "icon": "/images/skills/hivefdee21.svg"
+        },
+        {
+            "name": "Spark",
+            "icon": "/images/skills/sparke25a1c.svg"
+        },
+        {
+            "name": "Cassandra",
+            "icon": "/images/skills/cassandra1287b1.svg"
+        }
+    ]
+}

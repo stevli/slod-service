@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "role": "Software Engineer 3",
+        "company": "Walmart Inc",
+        "logo": "/images/logos/walmart_incwalmart.com",
+        "period": "2022 - Present",
+        "description": "Operated backend systems for the display of sponsored products on Walmart.com",
+        "achievements": [
+            "Designing and implementing web-service based advertisement for sponsored products advertising platform, serving millions of advertisers and customers worldwide and generating 1B annual ads revenue at Walmart.com",
+            "Created and sustained a cross-cloud distributed system using Java, Scala, Azure, RESTful, and other technologies to deliver core features for Sponsored Products, including ad targeting, bidding, filtering, scoring, and ranking",
+            "Created a system to enhance ad recommendation relevance by dynamically generating vectors for items and used vector search (ANN) to find relevant items using Python, ML models, Spark, Hive, Cassandra, Airflow, Vespa, and GCP Dataproc.",
+            "Designed and developed a new badging style for ads displaying real time fulfillment data generating over 5M additional annual ads revenue, working closely with various stakeholders such as frontend, product, fulfillment, and customers."
+        ]
+    },
+    {
+        "id": 2,
+        "role": "Software Engineer",
+        "company": "University of Rochester (Warner School of Education)",
+        "logo": "/images/logos/university_of_rochesterrochester.edu",
+        "period": "2019 - 2022",
+        "description": "Enhancing the University of Rochester (Warner School of Education) Internet and Intranet by creating new features for the website",
+        "achievements": [
+            "Improved load times by 20% by optimizing images and creating a new image generation pipeline",
+            "Used MySQL, PHP, and JQuery with a custom CMS"
+        ]
+    },
+    {
+        "id": 3,
+        "role": "Workshop Leader (TA)",
+        "company": "University of Rochester",
+        "logo": "/images/logos/university_of_rochesterrochester.edu",
+        "period": "2019 - 2020",
+        "description": "Led workshops for the University of Rochester",
+        "achievements": [
+            "Introduction to Java",
+            "Data Structures and Algorithms"
+        ]
+    }
+]

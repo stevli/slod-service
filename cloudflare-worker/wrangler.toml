@@ -1,0 +1,8 @@
+name = "slod-sample-page"
+main = "worker.js"
+compatibility_date = "2025-11-19"
+workers_dev = true
+
+# To publish to a custom account or route, add your account_id and route settings.
+# account_id = "your-account-id"
+# route = "example.com/*"

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+
+  /* Semantic Colors */
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-bg-muted: var(--bg-muted);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+
+  --font-sans: Inter, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Mode - Warm Stone Palette */
+    --bg-main: #fafaf9;
+    /* stone-50 */
+    --bg-card: #ffffff;
+    /* white */
+    --bg-muted: #f5f5f4;
+    /* stone-100 */
+    --text-main: #1c1917;
+    /* stone-900 */
+    --text-muted: #78716c;
+    /* stone-500 */
+  }
+
+  .dark {
+    /* Dark Mode - Cool Slate Palette */
+    --bg-main: #0f172a;
+    /* slate-900 */
+    --bg-card: #1e293b;
+    /* slate-800 */
+    --bg-muted: #334155;
+    /* slate-700 */
+    --text-main: #f8fafc;
+    /* slate-50 */
+    --text-muted: #94a3b8;
+    /* slate-400 */
+  }
+
+  body {
+    @apply bg-bg-main text-text-main antialiased transition-colors duration-300;
+  }
+}
