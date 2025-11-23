@@ -104,7 +104,37 @@ If you prefer to deploy as a Worker (or if you are using the `wrangler` CLI):
 
    *Note: Ensure you have run `npm run build` first.*
 
-## Project Structure
+## API Configuration (Contact Form)
+
+The contact form uses a Cloudflare Pages Function to send emails via SMTP. You need to configure the following environment variables in your Cloudflare Pages project settings:
+
+- `SMTP_HOST`: Your SMTP server host (e.g., `smtp.gmail.com`)
+- `SMTP_PORT`: Your SMTP server port (e.g., `587`)
+- `SMTP_SECURE`: `true` for port 465, `false` for other ports
+- `SMTP_USER`: Your email address
+- `SMTP_PASS`: Your email password or app-specific password
+
+### Local Development with API
+
+To test the API locally, create a `.env` file in the root directory (copy from `.env.example`) and fill in your SMTP credentials. Note that `npm run dev` uses Vite and proxies API requests, but for full function emulation you might need to use `wrangler pages dev`.
+
+## Hosting
+
+### Cloudflare Pages (Recommended)
+
+1. **Push to Git**: Ensure your code is pushed to a GitHub/GitLab repository.
+2. **Connect to Cloudflare**: Go to Cloudflare Dashboard > Workers & Pages > Create Application > Connect to Git.
+3. **Select Repository**: Choose your portfolio repository.
+4. **Build Settings**:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Build Output Directory**: `dist`
+5. **Environment Variables**: Add the SMTP variables listed above in the "Environment variables" section.
+6. **Deploy**: Click "Save and Deploy".
+
+### Static Hosting (No API)
+
+If you don't need the contact form, you can host the `dist` folder on any static site host (Netlify, Vercel, GitHub Pages). However, the contact form will not work without the backend function.
 
 ```
 portfolio/

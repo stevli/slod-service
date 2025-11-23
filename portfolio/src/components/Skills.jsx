@@ -30,7 +30,7 @@ const SkillCategory = ({ title, items, delay }) => (
 
 const Skills = () => {
     return (
-        <Section id="skills" title="Technical Skills" subtitle="My technical expertise and tools I use.">
+        <Section id="skills" title="Technical Skills" subtitle="My technical expertise and tools I use." className="bg-bg-muted">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <SkillCategory title="Languages" items={skills.languages} delay={0} />
                 <SkillCategory title="Cloud Platforms" items={skills.cloud} delay={0.1} />

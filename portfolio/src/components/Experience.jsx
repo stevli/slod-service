@@ -6,8 +6,8 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const Experience = () => {
     return (
-        <Section id="experience" title="Work Experience" subtitle="My professional journey so far.">
-            <div className="relative max-w-4xl mx-auto">
+        <Section id="experience" title="Work Experience" subtitle="My professional journey so far." width="max-w-[1920px] w-full">
+            <div className="relative w-full mx-auto">
                 {/* Vertical Line */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-bg-muted"></div>
 

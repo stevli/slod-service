@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
         <div className="min-h-screen bg-bg-main text-text-main selection:bg-primary selection:text-white transition-colors duration-300">
             {/* Navigation */}
             <nav
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-main/80 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-bg-card/90 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
                     }`}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden absolute top-full left-0 right-0 bg-bg-main/95 backdrop-blur-md border-t border-bg-muted p-6 shadow-xl">
+                    <div className="md:hidden absolute top-full left-0 right-0 bg-bg-card/95 backdrop-blur-md border-t border-bg-muted p-6 shadow-xl">
                         <div className="flex flex-col space-y-4">
                             {navLinks.map((link) => (
                                 <a
@@ -85,21 +85,21 @@ const Layout = ({ children }) => {
             <main>{children}</main>
 
             {/* Footer */}
-            <footer className="bg-bg-muted py-12 border-t border-bg-muted transition-colors duration-300">
+            <footer className="bg-text-main py-12 border-t border-text-main transition-colors duration-300">
                 <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
                     <div className="mb-6 md:mb-0">
-                        <p className="text-text-muted text-sm">
+                        <p className="text-bg-muted/60 text-sm">
                             © {new Date().getFullYear()} Steven Li. All rights reserved.
                         </p>
                     </div>
                     <div className="flex space-x-6">
-                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-bg-muted/60 hover:text-primary transition-colors">
                             <Github size={20} />
                         </a>
-                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
+                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-bg-muted/60 hover:text-primary transition-colors">
                             <Linkedin size={20} />
                         </a>
-                        <a href={socials.email} className="text-text-muted hover:text-primary transition-colors">
+                        <a href={`mailto:${socials.email}`} className="text-bg-muted/60 hover:text-primary transition-colors">
                             <Mail size={20} />
                         </a>
                     </div>

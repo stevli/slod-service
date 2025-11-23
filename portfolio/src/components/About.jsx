@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <Section id="about" title="About Me">
+        <Section id="about" title="About Me" className="bg-bg-muted">
             <div className="flex flex-col md:flex-row items-center gap-12">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}

@@ -1,10 +1,10 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
 
-const Section = ({ id, title, subtitle, children, className = '' }) => {
+const Section = ({ id, title, subtitle, children, className = '', width = 'container' }) => {
     return (
         <section id={id} className={`py-20 md:py-32 ${className}`}>
-            <div className="container mx-auto px-6">
+            <div className={`${width} mx-auto px-6`}>
                 {(title || subtitle) && (
                     <div className="mb-16 text-center flex flex-col items-center">
                         {title && (

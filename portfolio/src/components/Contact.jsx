@@ -47,9 +47,13 @@ const Contact = () => {
     };
 
     return (
-        <Section id="contact" title="Get In Touch" subtitle="Have a question or want to work together?">
-            <div className="min-h-[80vh] flex items-center justify-center w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-6xl mx-auto">
+        <Section id="contact" title="Get In Touch" subtitle="Let's build something amazing together" className="!py-16 md:!py-24 relative overflow-hidden bg-bg-muted">
+            <div className="flex items-center justify-center w-full relative">
+                {/* Background Blobs */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-6xl mx-auto relative z-10">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -58,26 +62,28 @@ const Contact = () => {
                         transition={{ duration: 0.5 }}
                         className="flex flex-col justify-center"
                     >
-                        <h3 className="text-3xl font-bold text-text-main mb-6">Let's Chat!</h3>
-                        <p className="text-text-muted text-lg mb-8 leading-relaxed">
-                            I'm currently looking for new opportunities, my inbox is always open.
-                            Whether you have a question, a project idea, or just want to say hi,
-                            I'll try my best to get back to you!
+                        <h3 className="text-4xl font-bold text-text-main mb-6 tracking-tight">Let's start a conversation</h3>
+                        <p className="text-text-muted text-lg mb-10 leading-relaxed">
+                            I'm currently open to new opportunities and collaborations.
+                            Whether you have a question, a project idea, or just want to say hello,
+                            I'd love to hear from you.
                         </p>
 
-                        <div className="space-y-6 mb-12">
-                            <a href={`mailto:${socials.email}`} className="flex items-center gap-4 text-text-muted hover:text-primary transition-colors group">
-                                <div className="w-12 h-12 bg-bg-muted rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                                    <Mail className="w-6 h-6" />
+                        <div className="space-y-8">
+                            <a href={`mailto:${socials.email}`} className="flex items-center gap-4 group w-fit">
+                                <div className="w-12 h-12 bg-bg-card border border-bg-muted rounded-xl flex items-center justify-center group-hover:border-primary/50 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300">
+                                    <Mail className="w-5 h-5 text-text-muted group-hover:text-primary transition-colors" />
                                 </div>
-                                <span className="text-lg font-medium">{socials.email}</span>
+                                <span className="text-lg text-text-main group-hover:text-primary transition-colors whitespace-nowrap">Email Me</span>
                             </a>
-                            <div className="flex gap-4 mt-4">
+
+                            <div className="flex gap-4">
                                 <a
                                     href={socials.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 bg-bg-muted rounded-full flex items-center justify-center text-text-muted hover:text-white hover:bg-gray-900 transition-all"
+                                    className="w-14 h-14 bg-bg-card border border-bg-muted rounded-2xl flex items-center justify-center text-text-muted hover:text-white hover:bg-[#24292e] hover:border-transparent hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                    aria-label="GitHub"
                                 >
                                     <Github className="w-6 h-6" />
                                 </a>
@@ -85,7 +91,8 @@ const Contact = () => {
                                     href={socials.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 bg-bg-muted rounded-full flex items-center justify-center text-text-muted hover:text-white hover:bg-[#0077b5] transition-all"
+                                    className="w-14 h-14 bg-bg-card border border-bg-muted rounded-2xl flex items-center justify-center text-text-muted hover:text-white hover:bg-[#0077b5] hover:border-transparent hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                    aria-label="LinkedIn"
                                 >
                                     <Linkedin className="w-6 h-6" />
                                 </a>
@@ -99,11 +106,11 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="bg-bg-card p-8 rounded-2xl border border-bg-muted shadow-xl"
+                        className="bg-bg-card/50 backdrop-blur-xl p-8 md:p-10 rounded-3xl border border-white/10 shadow-xl dark:border-white/5"
                     >
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-text-main mb-2">Name</label>
+                            <div className="space-y-2">
+                                <label htmlFor="name" className="text-sm font-medium text-text-main ml-1">Name</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -111,12 +118,12 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-bg-muted border border-transparent focus:border-primary focus:bg-bg-main focus:ring-2 focus:ring-primary/20 outline-none transition-all text-text-main"
-                                    placeholder="John Doe"
+                                    className="w-full px-5 py-4 rounded-xl bg-bg-main/50 border border-bg-muted focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-text-main placeholder:text-text-muted/50"
+                                    placeholder="What's your name?"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-text-main mb-2">Email</label>
+                            <div className="space-y-2">
+                                <label htmlFor="email" className="text-sm font-medium text-text-main ml-1">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -124,12 +131,12 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg bg-bg-muted border border-transparent focus:border-primary focus:bg-bg-main focus:ring-2 focus:ring-primary/20 outline-none transition-all text-text-main"
+                                    className="w-full px-5 py-4 rounded-xl bg-bg-main/50 border border-bg-muted focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-text-main placeholder:text-text-muted/50"
                                     placeholder="john@example.com"
                                 />
                             </div>
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-text-main mb-2">Message</label>
+                            <div className="space-y-2">
+                                <label htmlFor="message" className="text-sm font-medium text-text-main ml-1">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -137,19 +144,19 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     rows="4"
-                                    className="w-full px-4 py-3 rounded-lg bg-bg-muted border border-transparent focus:border-primary focus:bg-bg-main focus:ring-2 focus:ring-primary/20 outline-none transition-all text-text-main resize-none"
-                                    placeholder="Your message here..."
+                                    className="w-full px-5 py-4 rounded-xl bg-bg-main/50 border border-bg-muted focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all text-text-main resize-none placeholder:text-text-muted/50"
+                                    placeholder="How can I help you?"
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
                                 disabled={status === 'loading' || status === 'success'}
-                                className={`w-full py-4 rounded-lg font-bold text-white flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-[0.98] ${status === 'success'
-                                        ? 'bg-green-500 hover:bg-green-600'
-                                        : status === 'error'
-                                            ? 'bg-red-500 hover:bg-red-600'
-                                            : 'bg-primary hover:bg-blue-600'
+                                className={`w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 ${status === 'success'
+                                    ? 'bg-green-500 hover:bg-green-600 shadow-green-500/25'
+                                    : status === 'error'
+                                        ? 'bg-red-500 hover:bg-red-600 shadow-red-500/25'
+                                        : 'bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary shadow-primary/25'
                                     }`}
                             >
                                 {status === 'loading' ? (
