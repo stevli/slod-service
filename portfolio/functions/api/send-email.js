@@ -5,6 +5,15 @@ export async function onRequestPost(context) {
         const { request, env } = context;
         const { name, email, message } = await request.json();
 
+        // Validate environment variables
+        if (!env.SMTP_HOST || !env.SMTP_USER || !env.SMTP_PASS) {
+            console.error('Missing SMTP environment variables');
+            return new Response(JSON.stringify({ error: 'Server configuration error: Missing SMTP settings' }), {
+                status: 500,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        }
+
         if (!name || !email || !message) {
             return new Response(JSON.stringify({ error: 'Missing required fields' }), {
                 status: 400,
@@ -21,6 +30,10 @@ export async function onRequestPost(context) {
                 user: env.SMTP_USER,
                 pass: env.SMTP_PASS,
             },
+            // Fail fast if connection hangs
+            connectionTimeout: 5000, // 5 seconds
+            greetingTimeout: 5000,
+            socketTimeout: 5000,
         });
 
         // Send mail with defined transport object
